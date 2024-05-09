@@ -70,9 +70,7 @@ class _SignInPageState extends State<SignInPage> {
         padding: const EdgeInsets.only(bottom: 30),
         child: TextFormField(
           decoration: const InputDecoration(
-              border: OutlineInputBorder(),
-              label: Text("Password"),
-              hintText: "******"),
+              border: OutlineInputBorder(), label: Text("Password"), hintText: "******"),
           obscureText: true,
           onSaved: (value) => setState(() => password = value),
           validator: (value) {
@@ -123,10 +121,8 @@ class _SignInPageState extends State<SignInPage> {
             const Text("No account yet?"),
             TextButton(
                 onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const SignUpPage()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const SignUpPage()));
                 },
                 child: const Text("Sign Up"))
           ],
